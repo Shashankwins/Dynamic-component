@@ -6,19 +6,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './password-field.component.html',
   styleUrls: ['./password-field.component.css']
 })
-export class PasswordFieldComponent implements OnInit{
-  @Input() config : any;
-  @Input() formGroup! : FormGroup;
+export class PasswordFieldComponent implements OnInit {
+  @Input() config: any;
+  @Input() formGroup!: FormGroup;
   @Output() eventFromPasswordComp = new EventEmitter<any>();
 
   ngOnInit(): void {
     this.formGroup.addControl(this.config.formControlName, new FormControl(''))
-    if(this.config.required == 'true'){
+    if (this.config.required == 'true') {
       this.formGroup.controls[this.config.formControlName].setValidators([Validators.required])
     }
   }
 
-  onFocus(){
+  onFocus() {
     this.eventFromPasswordComp.emit('password');
   }
 }

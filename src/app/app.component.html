@@ -1,9 +1,14 @@
 <section class="wrapper">
-    <h2>Sign Up Form</h2>
-    <form [formGroup]="signUpForm">
-        <ng-container *ngFor="let config of configs">
-            <div dynamicField [config]="config" [formGroup]="signUpForm" (eventFromDirective)="hello($event)"></div>
-        </ng-container>
-        <button pButton pRipple label="Submit" (click)="signUp()" ></button>
-    </form>
+  <h2>Sign Up Form</h2>
+  <form [formGroup]="signUpForm">
+    <ng-container *ngFor="let config of configs">
+      <div
+        dynamicField
+        [config]="config"
+        [formGroup]="signUpForm"
+        (eventFromDirective)="hello($event)"
+      ></div>
+    </ng-container>
+    <button pButton pRipple label="Submit" (click)="signUp()"></button>
+  </form>
 </section>

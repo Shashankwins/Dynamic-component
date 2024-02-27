@@ -33,10 +33,10 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule
   ],
 
-  exports:[
+  exports: [
     InputFieldComponent,
     DropDownComponent,
-    DynamicFieldDirective,CommonModule,
+    DynamicFieldDirective, CommonModule,
     InputTextModule,
     DropdownModule,
     FormsModule,
@@ -45,6 +45,6 @@ import { ButtonModule } from 'primeng/button';
     BrowserAnimationsModule,
     ButtonModule
   ],
-  providers:[InputFieldComponent]
+  providers: [InputFieldComponent]
 })
 export class SharedModule { }

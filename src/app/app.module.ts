@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { ConfigService } from './shared/services/config.service';
-import { InputFieldComponent } from './shared/components/input-field/input-field.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +14,6 @@ import { InputFieldComponent } from './shared/components/input-field/input-field
     AppRoutingModule,
     SharedModule
   ],
-  providers: [ InputFieldComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,13 @@
 <form [formGroup]="formGroup">
-    <span class="p-float-label">
-        <p-dropdown formControlName="{{config.formControlName}}" [options]="config.option" placeholder="{{config.placeHolder}}" optionLabel="{{config.optionLabel}}" inputId="float-label" (onChange)="selectedDropdown($event)"></p-dropdown>
-        <label for="float-label">{{config.label}}</label>
-    </span>
+  <span class="p-float-label">
+    <p-dropdown
+      formControlName="{{ config.formControlName }}"
+      [options]="config.option"
+      placeholder="{{ config.placeHolder }}"
+      optionLabel="{{ config.optionLabel }}"
+      inputId="float-label"
+      (onChange)="selectedDropdown($event)"
+    ></p-dropdown>
+    <label for="float-label">{{ config.label }}</label>
+  </span>
 </form>
-    

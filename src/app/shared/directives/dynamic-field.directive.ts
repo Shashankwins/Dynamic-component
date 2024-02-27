@@ -9,25 +9,25 @@ import { PasswordFieldComponent } from '../components/password-field/password-fi
 })
 export class DynamicFieldDirective {
 
-  @Input() config : any;
-  @Input() formGroup! : FormGroup;
+  @Input() config: any;
+  @Input() formGroup!: FormGroup;
   @Output() eventFromDirective = new EventEmitter<any>;
 
-  constructor(private _view:ViewContainerRef){}
+  constructor(private _view: ViewContainerRef) { }
 
   ngOnInit(): void {
-    if(!this.config){
+    if (!this.config) {
       return
     }
-    else if(this.config.type == 'text'){
+    else if (this.config.type == 'text') {
       const control = this._view.createComponent(InputFieldComponent)
       control.setInput('config', this.config)
       control.setInput('formGroup', this.formGroup)
       control.instance.eventFromInputComp.subscribe((data) => {
         this.eventFromDirective.emit(data)
-      });       
+      });
     }
-    else if(this.config.type == 'password'){
+    else if (this.config.type == 'password') {
       const control = this._view.createComponent(PasswordFieldComponent)
       control.setInput('config', this.config)
       control.setInput('formGroup', this.formGroup)
@@ -35,13 +35,13 @@ export class DynamicFieldDirective {
         this.eventFromDirective.emit(data)
       });
     }
-    else if(this.config.type == 'dropdown'){
+    else if (this.config.type == 'dropdown') {
       const control = this._view.createComponent(DropDownComponent)
       control.setInput('config', this.config)
       control.setInput('formGroup', this.formGroup)
       control.instance.eventFromDropdown.subscribe((data) => {
         this.eventFromDirective.emit(data)
-      }); 
+      });
     }
   }
 }
