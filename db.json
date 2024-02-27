@@ -1,0 +1,22 @@
+{
+    "configs" : [
+        {"type": "text",
+         "label": "Full Name",
+         "formControlName": "fName",
+         "required": "true"
+        },
+        { "type":"password",
+        "label": "Password",
+        "formControlName": "password",
+        "required": "true" 
+      },
+      { "type": "dropdown",
+        "placeHolder": "Select Role",
+        "label" : "Select Role",
+        "formControlName": "role",
+        "option": [{"roleName":"staff"}, {"roleName": "manager"}],
+        "optionLabel": "roleName",
+        "required": "true"  
+      }
+    ]
+}

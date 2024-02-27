@@ -1,0 +1,6 @@
+<form [formGroup]="formGroup">
+    <span class="p-float-label" >
+        <input pInputText formControlName="{{config.formControlName}}" id="{{config.label}}" (blur)="sayHi()" />
+        <label htmlFor="{{config.label}}">{{config.label}}</label>
+    </span>
+</form>
