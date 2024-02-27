@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     })    
   }
 
-  signUp(){
+  signUp() {
     if(this.signUpForm.valid){
       console.log(this.signUpForm.value)
     }else if(this.signUpForm.invalid){
@@ -31,8 +31,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  hello(event : any){ 
+  hello(event : any) { 
     console.log(event);
-    
   }
 }
