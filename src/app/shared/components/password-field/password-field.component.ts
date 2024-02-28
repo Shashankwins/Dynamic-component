@@ -19,6 +19,6 @@ export class PasswordFieldComponent implements OnInit {
   }
 
   onFocus() {
-    this.eventFromPasswordComp.emit('password');
+    this.eventFromPasswordComp.emit('password nahi dikhega');
   }
 }
